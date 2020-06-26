@@ -26,7 +26,7 @@ server.post('/users', async (req,res) =>{
     let inseriu;
     const { id, name, age, phone, email } = req.body;
 
-    await database.query(`INSERT INTO users_data VALUES (${id},'${name}', ${age}, '${phone}',' ${email}');`,
+    await database.query(`INSERT INTO users VALUES (${id},'${name}', ${age}, '${phone}',' ${email}');`,
         {type:database.QueryTypes.INSERT})
         .then(result =>{
             inseriu = result
